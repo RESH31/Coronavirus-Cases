@@ -1,0 +1,50 @@
+﻿@model Covid_Status.Models.Data
+
+@{
+    ViewBag.Title = "CountryCoronaDetails";
+}
+<div style="margin-top:10%">
+    <hr />
+    <table class="table table-bordered" style="color:black">
+        <tr>
+            <td>
+                <b>@Html.DisplayNameFor(model => model.Location)</b>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Location)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b> @Html.DisplayNameFor(model => model.Confirmed)</b>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Confirmed)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b> @Html.DisplayNameFor(model => model.Deaths)</b>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Deaths)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>@Html.DisplayNameFor(model => model.Recovered)</b>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Recovered)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>  @Html.DisplayNameFor(model => model.Active)</b>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Active)
+            </td>
+        </tr>
+    </table>
+</div>

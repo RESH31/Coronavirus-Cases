@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Covid_Status.Models.Data>
+
+@{
+    ViewBag.Title = "Corona Status";
+}
+<table class="table table-bordered" style="color:black">
+    <tr style="background-color:yellowgreen">
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Confirmed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Deaths)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Recovered)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Active)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Confirmed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Deaths)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Recovered)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Active)
+        </td>
+        <td> 
+            <button type="button" class="btn btn-primary" style="background-color:yellowgreen">
+                @Html.ActionLink("Details", "CountryCoronaDetails", new { id = item.Location })
+            </button>
+        </td>
+    </tr>
+}
+
+</table>
